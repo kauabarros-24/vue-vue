@@ -1,17 +1,15 @@
-
 <script setup>
-const mensagem = 'programar'
-function reverter(texto) {
-  return texto.split('').reverse('').join('')
+function mostrarAlert (){
+  alert("Botão clicaco")
 }
 </script>
  
 <template>
-  <p>{{ reverter(mensagem) }}</p>
-  
+  <a v-on:click="mostrarAlert"><b>Clique aqui</b></a>
 
 </template>
-
-
-<style scoped>
+<style>
+a {
+  cursor: pointer;
+}
 </style>
