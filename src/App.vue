@@ -1,10 +1,15 @@
 <script setup>
-    import { ref } from 'vue';
-    const contador = ref(0);
-    function incrementar() {
-        contador.value++
-    }
+    import { reactive } from 'vue';
+
+    const pessoa = reactive({
+        nome: 'Kauã',
+        idade: 16,
+        ativo: true,
+    });
+    function aniversario() {pessoa.idade++}
 </script>
 <template>
-    <button @click="incrementar"> {{ contador }}</button>
+    <div>
+        <p @click="aniversario()">O {{pessoa.nome}} tem {{ pessoa.idade }} anos </p>
+    </div>
 </template>
